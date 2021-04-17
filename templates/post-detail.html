@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block content %}
+	    
+	    <article class="blog-post px-3 py-5 p-md-5">
+		    <div class="container">
+			    <header class="blog-post-header">
+				    <h2 class="title mb-2">{{post.title}}</h2>
+				    <div class="meta mb-3"><span class="date">Published 3 months ago</span><span class="time">{{post.get_readtime}}</span><span class="comment"><a href="#">4 comments</a></span></div>
+			    </header>
+			    
+			    <div class="blog-post-body">
+				    <figure class="blog-banner">
+						{% if post.post_banner%}
+				        <img class="img-fluid" src="{{post.post_banner.url}}" alt="image">
+						{% endif %}
+				        <!-- <figcaption class="mt-2 text-center image-caption">Image Credit: <a href="https://made4dev.com?ref=devblog" target="_blank">made4dev.com (Premium Programming T-shirts)</a></figcaption> -->
+				    </figure>
+					{{post.content}}
+			    </div>
+				    
+			    <nav class="blog-nav nav nav-justified my-5">
+				  <a class="nav-link-prev nav-item nav-link rounded-left" href="#">Previous<i class="arrow-prev fas fa-long-arrow-alt-left"></i></a>
+				  <a class="nav-link-next nav-item nav-link rounded-right" href="#">Next<i class="arrow-next fas fa-long-arrow-alt-right"></i></a>
+				</nav>
+				
+
+				
+		    </div><!--//container-->
+	    </article>
+	    
+	    <section class="promo-section theme-bg-light py-5 text-center">
+		    <div class="container">
+			    <h2 class="title">Promo Section Heading</h2>
+			    <p>You can use this section to promote your side projects etc. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. </p>
+                <figure class="promo-figure">
+			        <a href="https://made4dev.com" target="_blank"><img class="img-fluid" src="assets/images/promo-banner.jpg" alt="image"></a>
+			    </figure>
+		    </div><!--//container-->
+	    </section><!--//promo-section-->
+
+{% endblock content %}
