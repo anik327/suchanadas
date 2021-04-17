@@ -1,0 +1,1 @@
+web: gunicorn adblog.wsgi --log-file -
