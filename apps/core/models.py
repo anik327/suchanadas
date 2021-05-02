@@ -2,10 +2,11 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.db.models.base import Model
 from django.db.models.manager import ManagerDescriptor
+# Rich text fields that do not support file upload
 from ckeditor.fields import RichTextField
-
+# Rich text field that supports file upload
+from ckeditor_uploader.fields import RichTextUploadingField
 import readtime 
-# Create your models here.
 
 STATUS = (
     (0,"Draft"),
@@ -19,8 +20,7 @@ class Post(models.Model):
     slug = models.SlugField(max_length=200, unique=True)
     author = models.ForeignKey(User, on_delete= models.CASCADE,related_name='blog_posts')
     updated_on = models.DateTimeField(auto_now= True)
-    # content = models.TextField()
-    content = RichTextField(blank = True, null= True)
+    content = RichTextUploadingField(blank = True, null= True)
     created_on = models.DateTimeField(auto_now_add=True, null=True)
     status = models.IntegerField(choices=STATUS, default=0)
 
