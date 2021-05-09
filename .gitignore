@@ -1,6 +1,6 @@
 
-# Created by https://www.toptal.com/developers/gitignore/api/windows,django,vscode,python
-# Edit at https://www.toptal.com/developers/gitignore?templates=windows,django,vscode,python
+# Created by https://www.toptal.com/developers/gitignore/api/windows,visualstudiocode,python,django
+# Edit at https://www.toptal.com/developers/gitignore?templates=windows,visualstudiocode,python,django
 
 ### Django ###
 *.log
@@ -228,14 +228,18 @@ Thumbs.db
 # profiling data
 
 
-### vscode ###
-.vscode/
+### VisualStudioCode ###
 .vscode/*
 !.vscode/settings.json
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
 *.code-workspace
+
+### VisualStudioCode Patch ###
+# Ignore all local history of files
+.history
+.ionide
 
 ### Windows ###
 # Windows thumbnail cache files
@@ -262,4 +266,4 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-# End of https://www.toptal.com/developers/gitignore/api/windows,django,vscode,python
+# End of https://www.toptal.com/developers/gitignore/api/windows,visualstudiocode,python,django
