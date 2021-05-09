@@ -15,6 +15,7 @@
         </form>
     </div><!--//container-->
 </section>
+
 <section class="blog-list px-3 py-5 p-md-5">
     <div class="container">
         {% for post in object_list %}
@@ -27,8 +28,8 @@
                 {% endif %}
                 <div class="media-body">
                     <h3 class="title mb-1"><a href="{% url 'post-detail' post.slug %}">{{post.title}}</a></h3>
-                    <div class="meta mb-1"><span class="date">Published 2 days ago</span><span class="time">{{post.get_readtime}}</span><span class="comment"><a href="#">8 comments</a></span></div>
-                    <div class="intro">{{post.content|slice:":300"}}</div>
+                    <div class="meta mb-1"><span class="date">{{post.created_on}}</span><span class="time">{{post.get_readtime}}</span><span class="comment"><a href="#">8 comments</a></span></div>
+                    <div class="intro">{{post.synopsis | safe}}</div>
                     <a class="more-link" href="{% url 'post-detail' post.slug %}">Read more &rarr;</a>
                 </div><!--//media-body-->
             </div><!--//media-->
@@ -47,7 +48,6 @@
             {% endif %}
         </nav>
         {% endif %}
-        
     </div>
 </section>
 

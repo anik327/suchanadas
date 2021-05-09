@@ -2,19 +2,14 @@
 <!DOCTYPE html>
 <html lang="en"> 
 <head>
-	{% if site.title %}
-    <title>{{site.title}}</title>
-	{% else %}
-	<title>Suchana's Blog</title>
-	{% endif %}
 
-    
+	<title>Suchana's Blog</title>
     <!-- Meta -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <meta name="description" content="Blog Template"> -->
-    <!-- <meta name="author" content="Xiaoying Riley at 3rd Wave Media">     -->
+    <meta name="description" content="Suchana's Blog">
+    <meta name="author" content="Suchana Das">
     <link rel="shortcut icon" href="{% static 'favicon.ico' %}"> 
     
     <!-- FontAwesome JS-->
@@ -28,12 +23,9 @@
 <body>
     
     <header class="header text-center">
-		{% if site.heading %}	    
-	    <h1 class="blog-name pt-lg-4 mb-0"><a href="{% static 'home.html' %}">{{site.heading}}</a></h1>
-		{% else %}
+	
 		<h1 class="blog-name pt-lg-4 mb-0"><a href="{% static 'home.html' %}">Suchana's Blog</a></h1>
-		{% endif %}
-        
+
 	    <nav class="navbar navbar-expand-lg navbar-dark" >
            
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
@@ -51,10 +43,6 @@
 					<ul class="social-list list-inline py-3 mx-auto">
 			            <li class="list-inline-item"><a href="https://twitter.com/suchana_trisha"><i class="fab fa-twitter fa-fw"></i></a></li>
 			            <li class="list-inline-item"><a href="https://www.linkedin.com/in/suchana/"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
-						<li class="list-inline-item"><a href="https://www.facebook.com/suchana.trisha"><i class="fab fa-facebook fa-fw"></i></a></li>
-			            <!-- <li class="list-inline-item"><a href="#"><i class="fab fa-github-alt fa-fw"></i></a></li>
-			            <li class="list-inline-item"><a href="#"><i class="fab fa-stack-overflow fa-fw"></i></a></li>
-			            <li class="list-inline-item"><a href="#"><i class="fab fa-codepen fa-fw"></i></a></li> -->
 			        </ul><!--//social-list-->
 			        <hr> 
 				</div><!--//profile-section-->
@@ -63,11 +51,8 @@
 					<li class="nav-item active">
 					    <a class="nav-link" href="{% url 'home' %}"><i class="fas fa-home fa-fw mr-2"></i>Blog Home <span class="sr-only">(current)</span></a>
 					</li>
-					<!-- <li class="nav-item">
-					    <a class="nav-link" href="blog-post.html"><i class="fas fa-bookmark fa-fw mr-2"></i>Blog Post</a>
-					</li> -->
 					<li class="nav-item">
-					    <a class="nav-link" href="about.html"><i class="fas fa-user fa-fw mr-2"></i>About Me</a>
+					    <a class="nav-link" href="#"><i class="fas fa-user fa-fw mr-2"></i>About Me</a>
 					</li>
 				</ul>
 				
@@ -89,14 +74,11 @@
     </div><!--//main-wrapper-->
     
     
-    
-
-    
-       
     <!-- Javascript -->          
     <script src="{% static 'plugins/jquery-3.4.1.min.js' %}"></script>
     <script src="{% static 'plugins/popper.min.js'%}"></script> 
-    <script src="{% static 'plugins/bootstrap/js/bootstrap.min.js' %}"></script>     
+    <script src="{% static 'plugins/bootstrap/js/bootstrap.min.js' %}"></script>
+	<script id="dsq-count-scr" src="//suchanadas.disqus.com/count.js" async></script>     
     
 </body>
 </html> 
