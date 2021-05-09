@@ -5,7 +5,9 @@
 		    <div class="container">
 			    <header class="blog-post-header">
 				    <h2 class="title mb-2">{{post.title}}</h2>
-				    <div class="meta mb-3"><span class="date">Published 3 months ago</span><span class="time">{{post.get_readtime}}</span><span class="comment"><a href="#">4 comments</a></span></div>
+				    <div class="meta mb-3"><span class="date">{{post.created_on}}</span><span class="time">{{post.get_readtime}}</span></div>
+                	<!-- Go to www.addthis.com/dashboard to customize your tools -->
+                	<div class="addthis_inline_share_toolbox"></div>
 			    </header>
 			    
 			    <div class="blog-post-body">

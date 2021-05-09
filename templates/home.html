@@ -28,7 +28,7 @@
                 {% endif %}
                 <div class="media-body">
                     <h3 class="title mb-1"><a href="{% url 'post-detail' post.slug %}">{{post.title}}</a></h3>
-                    <div class="meta mb-1"><span class="date">{{post.created_on}}</span><span class="time">{{post.get_readtime}}</span><span class="comment"><a href="#">8 comments</a></span></div>
+                    <div class="meta mb-1"><span class="date">{{post.created_on}}</span><span class="time">{{post.get_readtime}}</span></div>
                     <div class="intro">{{post.synopsis | safe}}</div>
                     <a class="more-link" href="{% url 'post-detail' post.slug %}">Read more &rarr;</a>
                 </div><!--//media-body-->
