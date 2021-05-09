@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-_5sbp468jf@_hgi*$45$m2uo95rj5+t%63e7pys8)6+=59=#z(
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['suchanadas.com, 127.0.0.1']
+ALLOWED_HOSTS = ['suchanadas.com','127.0.0.1']
 
 #For app in subfolder
 sys.path.insert(0, os.path.join(BASE_DIR, 'apps'))
@@ -85,13 +85,24 @@ WSGI_APPLICATION = 'adblog.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
+#Uncomment to use sqlite3 database
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'suchanadasdb',
+        'USER': 'anikdas',
+        'PASSWORD': '@dminHulk1998',
+        'HOST': '127.0.0.1',
+        'PORT': '5432',
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators

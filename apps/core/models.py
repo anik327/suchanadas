@@ -15,7 +15,7 @@ STATUS = (
 
 class Post(models.Model):
     title = models.CharField(max_length=200, unique=True)
-    post_thum = models.ImageField(null=True, blank=True, upload_to="images/thumbnails//%Y/%m/%d/")
+    post_thum = models.ImageField(null=True, blank=True, upload_to="images/thumbnails")
     post_banner = models.ImageField(null=True, blank=True, upload_to="images/banners")
     slug = models.SlugField(max_length=200, unique=True)
     author = models.ForeignKey(User, on_delete= models.CASCADE,related_name='blog_posts')
